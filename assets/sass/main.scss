@@ -240,10 +240,10 @@ nav {
 section {
   padding: 0 0 $footer;
   .inner {
-    background-color: #FFF4E1;
     padding: 20px 0;
-  }
 
+    background-color: #fff4e1;
+  }
 }
 article {
   @extend .clearfix;
@@ -254,12 +254,46 @@ article {
 
 
 footer {
-  height: $footer;
+  height: $footer + 30;
   margin: $footer_margin auto 0;
-
-  background-color: $light-gray;
-  .inner {
+  .row {
     height: $footer;
+
+    color: #fff;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+    background-image: url(../img/bg/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: $base-text-shadow;
+  }
+  .footer-phone {
+    height: 90px;
+    padding: 10px 10px 10px 40px;
+    a {
+      line-height: 1.1;
+
+      display: block;
+
+      text-decoration: none;
+
+      color: #fff;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .adress {
+    line-height: 1;
+
+    padding: 10px;
+
+    text-align: right;
+  }
+  .copyright {
+    text-align: center;
+    line-height: 1;
   }
 }
 
