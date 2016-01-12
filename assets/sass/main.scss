@@ -239,6 +239,11 @@ nav {
 
 section {
   padding: 0 0 $footer;
+  .inner {
+    background-color: #FFF4E1;
+    padding: 20px 0;
+  }
+
 }
 article {
   @extend .clearfix;
