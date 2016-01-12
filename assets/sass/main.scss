@@ -252,7 +252,64 @@ article {
   @extend .clearfix;
 }
 
+.widget {
+  margin-bottom: 15px;
+  padding: 15px;
 
+  border: 1px solid #fff;
+  border-radius: $base-border-radius;
+  background-image: url(../img/bg/widget.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  box-shadow: $base-box-shadow;
+  h6 {
+    font-size: 140%;
+
+    text-align: center;
+
+    color: #fff;
+    text-shadow: $base-text-shadow;
+  }
+  .title-red {
+    text-align: center;
+
+    color: $red;
+  }
+  .title-subtitle {
+    text-align: center;
+  }
+}
+.widget-catalog {
+  li {
+    a {
+      text-decoration: none;
+
+      color: #000;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+.widget-news {
+  li {
+    margin-bottom: 15px;
+    h3 {
+      font-weight: bold;
+
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+
+        color: #000;
+      }
+    }
+    .price-new {
+      color: $red;
+    }
+  }
+}
 footer {
   height: $footer + 30;
   margin: $footer_margin auto 0;
@@ -292,8 +349,9 @@ footer {
     text-align: right;
   }
   .copyright {
-    text-align: center;
     line-height: 1;
+
+    text-align: center;
   }
 }
 
