@@ -1,7 +1,7 @@
 // Font Sizes
-$base-font-size: 16px;
+$base-font-size: 20px;
 $em-base: $base-font-size;
-$base-font-family: 'Open Sans', sans-serif;
+$base-font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
 $heading-font-family: $base-font-family;
 
 // font weight
@@ -17,7 +17,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$width: 980px;
+$width: 1200px;
 $footer: 50px;
 $footer_margin: $footer - 2 * $footer;
 $base-border-radius: 3px;
@@ -28,7 +28,9 @@ $base-z-index: 0;
 // Colors
 $orange: orange;
 $red: red;
+$orange: #e57100;
 $blue: #477dca;
+$gray: #c1c1c1;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
@@ -41,8 +43,10 @@ $action-color: $blue;
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
+$base-text-shadow: #000000 1px 1px 0, #000000 2px 2px 0;
+
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: $gray;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
