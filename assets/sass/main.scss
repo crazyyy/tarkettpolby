@@ -251,7 +251,32 @@ article {
 .looper {
   @extend .clearfix;
 }
+.article-content {
+  padding: 0 20px 20px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
 
+    text-align: center;
+
+    color: $orange;
+  }
+  ul {
+    padding: 10px 10px 10px 40px;
+    li{
+
+      &:before {
+        display: none;
+      }
+      list-style-type: disc;
+    }
+
+  }
+}
 .widget {
   margin-bottom: 15px;
   padding: 15px;
