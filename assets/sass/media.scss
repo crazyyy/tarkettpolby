@@ -92,5 +92,47 @@
   .headsearch {
     width: 100%;
   }
-}
 
+  .tol-sell {
+    ul {
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+      li {
+        display: inline-block;
+        float: none;
+
+        width: 48%;
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+  header {
+    .phone-block {
+      a {
+        font-size: 70%;
+      }
+    }
+  }
+  .widget {
+    h6 {
+      font-size: 100%;
+    }
+  }
+  .widget-catalog {
+    li {
+      font-size: 80%;
+    }
+  }
+
+  .widget-news {
+    li {
+      h3 {
+        font-size: 80%;
+      }
+    }
+  }
+}
