@@ -194,6 +194,51 @@ nav {
     }
   }
 }
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+
+  background-image: url(../img/bg/hamburger.png);
+  &.mobile-active {
+    z-index: 15;
+
+    background-image: url(../img/bg/cancel.png);
+  }
+}
+.mobile-nav {
+  z-index: 10;
+  top: 0;
+
+  display: block;
+
+  width: 100%;
+  ul {
+    width: 100%;
+  }
+  li {
+    display: block;
+
+    width: 100%;
+    padding: 1em;
+
+    text-align: left;
+
+    background-color: darken($orange, 10%);
+    a {
+      padding: 0;
+    }
+  }
+}
+
+
 .headsearch {
   position: absolute;
   right: 0;
@@ -516,8 +561,10 @@ article {
     margin-bottom: 1em;
     a {
       display: block;
-      color: $orange;
+
       text-decoration: none;
+
+      color: $orange;
     }
     span {
       display: block;
@@ -525,9 +572,9 @@ article {
       height: 60px;
 
       text-align: center;
+      text-decoration: none;
 
       color: $orange;
-      text-decoration: none;
     }
     img {
       width: 100%;
