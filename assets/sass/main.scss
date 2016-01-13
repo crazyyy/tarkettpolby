@@ -12,6 +12,7 @@
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_opensans';
 @import 'fonts/font_roboto';
+@import 'owl/owl.carousel';
 
 body {
   font-family: $base-font-family;
@@ -267,14 +268,164 @@ article {
   }
   ul {
     padding: 10px 10px 10px 40px;
-    li{
-
+    li {
+      list-style-type: none;
       &:before {
-        display: none;
-      }
-      list-style-type: disc;
-    }
+        display: inline-block;
 
+        width: 10px;
+        height: 10px;
+        margin: 0 1em 0 -20px;
+
+        border-radius: 50%;
+        background-color: $orange;
+      }
+    }
+  }
+  blockquote {
+    display: block;
+
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding: 5px 0 5px 1em;
+
+    border-left: 5px solid $orange;
+  }
+}
+.article-slider {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0 20px 20px;
+  .owl-item {
+    width: 100%;
+    height: 400px;
+    .item {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+      a {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      p {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        padding: 1em;
+
+        color: #fff;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, .55);
+      }
+      &:hover {
+        p {
+          background-color: #000;
+          background-color: rgba(0, 0, 0, .8);
+        }
+      }
+    }
+  }
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 100%;
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 0;
+
+      margin-top: -20px;
+    }
+    .owl-prev {
+      left: 1em;
+    }
+    .owl-next {
+      right: 1em;
+    }
+    .fa {
+      font-size: 2em;
+
+      cursor: pointer;
+
+      color: $orange;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+.article-mosaic {
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .article-mosaic-container {
+    position: relative;
+
+    height: 250px;
+    margin-bottom: 1.5em;
+    img {
+      position: relative;
+      z-index: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: #fff;
+      box-shadow: $form-box-shadow-focus;
+    }
+    h5 {
+      position: absolute;
+      z-index: 1;
+      top: 1em;
+      left: 0;
+
+      max-width: 95%;
+      padding: 3px;
+
+      border-left: 1px solid $orange;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, .55);
+    }
+    &:hover {
+      a {
+        box-shadow: $base-box-shadow;
+      }
+      h5 {
+        color: $orange;
+        background-color: #000;
+      }
+    }
   }
 }
 .widget {

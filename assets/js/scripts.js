@@ -17,3 +17,20 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+  items: 1,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  nav: true,
+  navText: ['<i class="fa fa-chevron-circle-left"></i>','<i class="fa fa-chevron-circle-right"></i>'],
+  autoplayTimeout: 100000,
+  autoplayHoverPause: true
+});
+$('.play').on('click',function(){
+  owl.trigger('autoplay.play.owl',[1000])
+})
+$('.stop').on('click',function(){
+  owl.trigger('autoplay.stop.owl')
+})
