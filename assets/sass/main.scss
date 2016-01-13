@@ -458,12 +458,44 @@ article {
 }
 .widget-catalog {
   li {
+    line-height: 1.2;
+
+    margin-bottom: .3em;
     a {
       text-decoration: none;
 
       color: #000;
       &:hover {
         color: $orange;
+      }
+    }
+    .submenu {
+      display: none;
+    }
+  }
+  .active {
+    font-weight: bold;
+
+    color: $orange;
+    .submenu {
+      font-weight: normal;
+
+      display: block;
+
+      padding: 0 0 0 1.5em;
+      li {
+        position: relative;
+
+        @extend .fa;
+        &:before {
+          font-size: .8em;
+
+          position: absolute;
+          top: 4px;
+          left: -1.2em;
+
+          content: '\f058';
+        }
       }
     }
   }
