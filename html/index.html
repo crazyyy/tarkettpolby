@@ -11,6 +11,7 @@
     <link href="favicon.ico" rel="shortcut icon">
     <!-- css + javascript -->
     <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="css/media.css" media="all">
 
     <!--[if lt IE 9]>
       <script type="text/javascript" src="js/html5shiv.js"></script>
@@ -49,6 +50,8 @@
         </ul>
       </nav><!-- /nav -->
 
+      <span class="hamburger"></span>
+
       <form action="http://yandex.ru/sitesearch" method="get" target="_self" class="headsearch">
         <input type="hidden" name="searchid" value="2076276">
         <input type="hidden" name="l10n" value="ru">
@@ -64,49 +67,51 @@
     <div class="inner row">
 
       <aside class="sidebar col-md-3" role="complementary">
-        <div class="widget widget-catalog">
-          <h6>КАТАЛОГ</h6>
-          <ul>
-            <li><a href="#">СЕТКА РАБИЦА</a></li>
-            <li><a href="#">ЖИДКИЕ ОБОИ</a></li>
-            <li><a href="#">КОВРОЛИН</a></li>
-            <li><a href="#">КОВРЫ</a></li>
-            <li><a href="#">ЛАМИНАТ</a></li>
-            <li><a href="#">ЛИНОЛЕУМ</a></li>
-            <li><a href="#">ГЕТЕРОГЕННОЕ ГОМОГЕННОЕ ПВХ ПОКРЫТИЯ</a></li>
-            <li><a href="#">ПЛИНТУС</a></li>
-            <li><a href="#">ПОДЛОЖКА</a></li>
-            <li><a href="#">ПОРОГИ АЛЮМИНИЕВЫЕ</a></li>
-            <li><a href="#">ОСБ ПЛИТЫ</a></li>
-            <li><a href="#">МДФ ПАНЕЛИ</a></li>
-            <li><a href="#">ПВХ ПАНЕЛИ</a></li>
-            <li><a href="#">КЛЕЙ</a></li>
-            <li><a href="#">ДВУХСТОРОННИЙ СКОТЧ</a></li>
-          </ul>
-        </div><!-- widget widget-catalog-->
-        <div class="widget widget-news">
-          <h6>НОВОСТИ:</h6>
-          <h3 class="title-red">СНИЖЕНИЕ ЦЕН НА КОВРОЛИН ЛИНОЛЕУМ И ЛАМИНАТ</h3>
-          <h4 class="title-subtitle">ТЕПЕРЬ ЦЕНЫ ЕЩЕ НИЖЕ</h4>
-          <ul>
-            <li>
-              <h3><a href="#">ЛАМИНАТ КРОНОШПАН FORTE 33 класс</a></h3>
-              <span class="price-new">120 000</span> / m²
-            </li>
-            <li>
-              <h3><a href="#">КОВРОЛИН АТЛАНТ</a></h3>
-              <span class="price-new">94 000</span> / m²
-            </li>
-            <li>
-              <h3><a href="#">КОВРОЛИН ГЛОБАЛ</a></h3>
-              <span class="price-new">от 94 000</span> / m²
-            </li>
-            <li>
-              <h3><a href="#">КОВРОЛИН ЛИДЕР</a></h3>
-              <span class="price-new">130 000</span> / m²
-            </li>
-          </ul>
-        </div><!-- /.widget widget-news -->
+        <div class="row">
+          <div class="widget widget-catalog col-md-12 col-xs-6 col-sm-6">
+            <h6>КАТАЛОГ</h6>
+            <ul>
+              <li><a href="#">СЕТКА РАБИЦА</a></li>
+              <li><a href="#">ЖИДКИЕ ОБОИ</a></li>
+              <li><a href="#">КОВРОЛИН</a></li>
+              <li><a href="#">КОВРЫ</a></li>
+              <li><a href="#">ЛАМИНАТ</a></li>
+              <li><a href="#">ЛИНОЛЕУМ</a></li>
+              <li><a href="#">ГЕТЕРОГЕННОЕ ГОМОГЕННОЕ ПВХ ПОКРЫТИЯ</a></li>
+              <li><a href="#">ПЛИНТУС</a></li>
+              <li><a href="#">ПОДЛОЖКА</a></li>
+              <li><a href="#">ПОРОГИ АЛЮМИНИЕВЫЕ</a></li>
+              <li><a href="#">ОСБ ПЛИТЫ</a></li>
+              <li><a href="#">МДФ ПАНЕЛИ</a></li>
+              <li><a href="#">ПВХ ПАНЕЛИ</a></li>
+              <li><a href="#">КЛЕЙ</a></li>
+              <li><a href="#">ДВУХСТОРОННИЙ СКОТЧ</a></li>
+            </ul>
+          </div><!-- widget widget-catalog-->
+          <div class="widget widget-news col-md-12 col-xs-6 col-sm-6">
+            <h6>НОВОСТИ:</h6>
+            <h3 class="title-red">СНИЖЕНИЕ ЦЕН НА КОВРОЛИН ЛИНОЛЕУМ И ЛАМИНАТ</h3>
+            <h4 class="title-subtitle">ТЕПЕРЬ ЦЕНЫ ЕЩЕ НИЖЕ</h4>
+            <ul>
+              <li>
+                <h3><a href="#">ЛАМИНАТ КРОНОШПАН FORTE 33 класс</a></h3>
+                <span class="price-new">120 000</span> / m²
+              </li>
+              <li>
+                <h3><a href="#">КОВРОЛИН АТЛАНТ</a></h3>
+                <span class="price-new">94 000</span> / m²
+              </li>
+              <li>
+                <h3><a href="#">КОВРОЛИН ГЛОБАЛ</a></h3>
+                <span class="price-new">от 94 000</span> / m²
+              </li>
+              <li>
+                <h3><a href="#">КОВРОЛИН ЛИДЕР</a></h3>
+                <span class="price-new">130 000</span> / m²
+              </li>
+            </ul>
+          </div><!-- /.widget widget-news -->
+        </div>
       </aside><!-- /sidebar -->
 
       <div class="col-md-9">
@@ -142,110 +147,110 @@
           <article class="article-mosaic">
             <div class="row">
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-1.jpg" alt="">
                   <h5>ЛИНОЛЕУМ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-2.jpg" alt="">
                   <h5>КОВРОЛИН</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-3.jpg" alt="">
                   <h5>КОВРЫ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-4.jpg" alt="">
                   <h5>ЛАМИНАТ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-5.jpg" alt="">
                   <h5>СЕТКА РАБИЦА</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-6.jpg" alt="">
                   <h5>Гетерогенные Гомогенные покрытия</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-7.jpg" alt="">
                   <h5>ПЛИНТУС</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-8.jpg" alt="">
                   <h5>ПОДЛОЖКА</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-9.jpg" alt="">
                   <h5>ПОРОГИ АЛЮМИНИВЫЕ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-10.jpg" alt="">
                   <h5>ОСБ ПЛИТЫ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-11.jpg" alt="">
                   <h5>МДФ ПАНЕЛИ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-12.jpg" alt="">
                   <h5>ПВХ ПАНЕЛИ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-13.jpg" alt="">
                   <h5>КЛЕЙ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-14.jpg" alt="">
                   <h5>ДВУХСТОРОННИЙ СКОТЧ ДЛЯ ЛИНОЛЕУМА И КОВРОЛИНА</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
-              <div class="col-md-4 article-mosaic-container">
+              <div class="col-md-4 article-mosaic-container col-xs-6 col-sm-6">
                 <a href="#">
                   <img src="img/mosaic-container/mosaic-container-15.jpg" alt="">
                   <h5>ЖИДКИЕ ОБОИ</h5>
                 </a>
-              </div><!-- /.col-md-4 article-mosaic-container -->
+              </div><!-- /.col-md-4 article-mosaic-container col-xs-6 col-sm-6 -->
 
             </div>
           </article><!-- /.article-mosaic row -->
@@ -317,12 +322,12 @@
 <footer role="contentinfo">
   <div class="container inner">
     <div class="row">
-      <div class="footer-phone col-md-6 col-sm-6 col-xs-12">
+      <div class="footer-phone col-md-6 col-sm-6 col-xs-6">
         <a href="tel:+375447898105">+375 44 789 81 05;</a>
         <a href="tel:+375173417544">+375 17 341 75 44;</a>
         <a href="mailto:cck_minsk@mail.ru">cck_minsk@mail.ru</a>
       </div><!-- /.footer-phone -->
-      <p class="adress col-md-6 col-sm-6 col-xs-12">г. Минск, ул. Ташкентская, д.7, ком 46<br>Самые низкие цены на ковролин ламинат линолеум и сопутствующие товары</p><!-- /adress -->
+      <p class="adress col-md-6 col-sm-6 col-xs-6">г. Минск, ул. Ташкентская, д.7, ком 46<br>Самые низкие цены на ковролин ламинат линолеум и сопутствующие товары</p><!-- /adress -->
       <p class="copyright col-md-12 col-sm-12 col-xs-12">2011-2016 © Магазин-Салон Дом Напольных Покрытий</p>
     </div><!-- /.inner -->
   </div><!-- /.container -->

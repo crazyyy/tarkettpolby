@@ -34,3 +34,10 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
   owl.trigger('autoplay.stop.owl')
 })
+
+
+
+  $('.hamburger').on('click', function(){
+    $('nav').toggleClass('mobile-nav');
+    $(this).toggleClass('mobile-active');
+  })
