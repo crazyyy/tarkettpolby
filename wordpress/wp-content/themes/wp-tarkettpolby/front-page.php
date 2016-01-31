@@ -3,32 +3,35 @@
   <div class="col-md-9">
     <div class="row">
 
-      <article class="article-slider">
-        <div class="owl-carousel">
+      <?php if( have_rows('slider') ): ?>
+        <article class="article-slider">
+          <div class="owl-carousel">
 
-          <div class="item">
-            <a href="#">
-              <img src="img/slider/slider-1.jpg" alt="">
-              <p>Такой вид напольного покрытия как линолеум является одним из самых популярных и дешевых материалов. Его низкая и доступная цена являются для покупателя решающим фактором.</p>
-            </a>
-          </div><!-- item -->
+            <?php while( have_rows('slider') ): the_row();
 
-          <div class="item">
-            <a href="#">
-              <img src="img/slider/slider-2.jpg" alt="">
-              <p>Ковролин обладает высокой проходимостью и может выдержать даже экстремальные условия эксплуатации. Именно поэтому такое ковровое покрытие решают купить и постелить в офисных помещениях или на торговых площадях.</p>
-            </a>
-          </div><!-- item -->
+              // vars
+              $image = get_sub_field('image');
+              $content = get_sub_field('content');
+              $link = get_sub_field('link');
 
-          <div class="item">
-            <a href="#">
-              <img src="img/slider/slider-3.jpg" alt="">
-              <p>Ламинат, как основа дизайна квартиры – это не просто современная тенденция, а хорошая традиция, основанная на грамотном выборе этого типа материала и его свойствах.</p>
-            </a>
-          </div><!-- item -->
+            ?>
 
-        </div><!-- owl-carousel -->
-      </article><!-- /.article-slider -->
+              <div class="item">
+                <?php if( $link ): ?>
+                  <a href="<?php echo $link; ?>">
+                <?php endif; ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                <P><?php echo $content; ?></P>
+                <?php if( $link ): ?>
+                  </a>
+                <?php endif; ?>
+              </div><!-- item -->
+
+            <?php endwhile; ?>
+
+          </div><!-- owl-carousel -->
+        </article><!-- /.article-slider -->
+      <?php endif; ?>
 
       <article class="article-mosaic">
         <div class="row">
