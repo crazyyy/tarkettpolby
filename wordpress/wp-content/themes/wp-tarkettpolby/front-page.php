@@ -145,7 +145,7 @@
       </article><!-- /.article-mosaic row -->
 
       <article class="article-content">
-<?php the_content(); ?>
+        <?php the_content(); ?>
       </article><!-- /.article-content -->
 
     </div><!-- /.row -->

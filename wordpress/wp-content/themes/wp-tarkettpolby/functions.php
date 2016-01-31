@@ -405,18 +405,6 @@ function filter_media_comment_status( $open, $post_id ) {
 }
 
 
- // Редирект записи, когда поисковый запрос выдает один результат
- // http://wordpresso.org/hacks/29-wordpress-tryukov-dlya-rabotyi-s-zapisyami-i-stranitsami/
-add_action('template_redirect', 'single_result');
-function single_result() {
-  if (is_search()) {
-    global $wp_query;
-    if ($wp_query->post_count == 1) {
-      wp_redirect( get_permalink( $wp_query->posts['0']->ID ) );
-    }
-  }
-}
-
 // хлебные крошки   http://dimox.name/wordpress-breadcrumbs-without-a-plugin/
 // < ?php if (function_exists('easy_breadcrumbs')) easy_breadcrumbs(); ? >
 //
@@ -565,79 +553,75 @@ function easy_breadcrumbs() {
   }
 } // end easy_breadcrumbs()
 
-/*
-  Plugin Name: Top Level Categories
-  Plugin URI: http://fortes.com/projects/wordpress/top-level-cats/
-  Description: Removes the prefix from the URL for a category. For instance, if your old category link was <code>/category/catname</code> it will now be <code>/catname</code>
-*/
 
-// In case we're running standalone, for some odd reason
-if (function_exists('add_action')) {
-  register_activation_hook(__FILE__, 'top_level_cats_activate');
-  register_deactivation_hook(__FILE__, 'top_level_cats_deactivate');
+// Add news Post Type
+add_action( 'init', 'post_type_product' );
+function post_type_product() {
 
-  // Setup filters
-  add_filter('category_rewrite_rules', 'top_level_cats_category_rewrite_rules');
-  add_filter('generate_rewrite_rules', 'top_level_cats_generate_rewrite_rules');
-  add_filter('category_link', 'top_level_cats_category_link', 10, 2);
+  $labels = array(
+    'name'=> 'Products',
+    'singular_name' => 'Products',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
 
-  global $clean_category_rewrites, $clean_rewrites;
-  $clean_category_rewrites = array();
-}
-function top_level_cats_activate() {
-  global $wp_rewrite;
-  $wp_rewrite->flush_rules();
-}
-function top_level_cats_deactivate() {
-  // Remove the filters so we don't regenerate the wrong rules when we flush
-  remove_filter('category_rewrite_rules', 'top_level_cats_category_rewrite_rules');
-  remove_filter('generate_rewrite_rules', 'top_level_cats_generate_rewrite_rules');
-  remove_filter('category_link', 'top_level_cats_category_link');
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Products Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 3,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-cart',
+    'capability_type' => 'post',
+    'hierarchical' => true,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'products' ),
+    'show_in_rest' => true
+  );
 
-  global $wp_rewrite;
-  $wp_rewrite->flush_rules();
-}
-function top_level_cats_generate_rewrite_rules($wp_rewrite) {
-  global $clean_category_rewrites;
-  $wp_rewrite->rules = $wp_rewrite->rules + $clean_category_rewrites;
-}
-
-function top_level_cats_category_rewrite_rules($category_rewrite)
-{
-  global $clean_category_rewrites;
-
-  global $wp_rewrite;
-  // Make sure to use verbose rules, otherwise we'll clobber our
-  // category permalinks with page permalinks
-  $wp_rewrite->use_verbose_page_rules = true;
-
-  while (list($k, $v) = each($category_rewrite)) {
-    // Strip off the category prefix
-    $new_k = top_level_cats_remove_cat_base($k);
-    $clean_category_rewrites[$new_k] = $v;
-  }
-
-    return $category_rewrite;
+  register_post_type( 'products' , $args );
 }
 
-function top_level_cats_category_link($cat_link, $cat_id) {
-  return top_level_cats_remove_cat_base($cat_link);
+// hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'taxonomies_category', 0 );
+function taxonomies_category() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => 'Categories',
+    'singular_name'     => 'Category',
+    'search_items'      => 'Search',
+    'all_items'         => 'All',
+    'parent_item'       => 'Parent',
+    'parent_item_colon' => 'Parent',
+    'edit_item'         => 'Edit',
+    'update_item'       => 'Update',
+    'add_new_item'      => 'Add',
+    'new_item_name'     => 'Add',
+    'menu_name'         => 'Categories',
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'categories' ),
+  );
+
+  register_taxonomy( 'categories', array( 'products' ), $args );
 }
 
-function top_level_cats_remove_cat_base($link) {
-  $category_base = get_option('category_base');
-
-  // WP uses "category/" as the default
-  if ($category_base == '')
-      $category_base = 'category';
-
-  // Remove initial slash, if there is one (we remove the trailing slash in the regex replacement and don't want to end up short a slash)
-  if (substr($category_base, 0, 1) == '/')
-      $category_base = substr($category_base, 1);
-
-  $category_base .= '/';
-
-  return preg_replace('|' . $category_base . '|', '', $link, 1);
-}
 
 ?>
