@@ -1,0 +1,42 @@
+.highslide-wrapper DIV{FONT-FAMILY:Verdana, Helvetica;FONT-SIZE:10pt}
+.highslide{OUTLINE-STYLE:none;OUTLINE-COLOR:invert;OUTLINE-WIDTH:medium;TEXT-DECORATION:none}
+.highslide IMG{padding:0;border:none;}
+*.highslide:hover IMG{BORDER-BOTTOM-COLOR:gray;BORDER-TOP-COLOR:gray;BORDER-RIGHT-COLOR:gray;BORDER-LEFT-COLOR:gray}
+*.highslide-active-anchor IMG{BORDER-BOTTOM-COLOR:black;BORDER-TOP-COLOR:black;BORDER-RIGHT-COLOR:black;BORDER-LEFT-COLOR:black}
+.highslide-active-anchor:hover IMG{BORDER-BOTTOM-COLOR:black;BORDER-TOP-COLOR:black;BORDER-RIGHT-COLOR:black;BORDER-LEFT-COLOR:black}
+.highslide-image{border:none;}
+*.highslide-wrapper{BACKGROUND:white}
+*.rounded-white{BACKGROUND:white}
+*.highslide-image-blur{}
+*.highslide-caption{PADDING-BOTTOM:5px;PADDING-LEFT:5px;PADDING-RIGHT:5px;DISPLAY:none;BACKGROUND:white;FONT-SIZE:1em;BORDER-TOP:medium none;PADDING-TOP:5px}
+.highslide-heading{PADDING-LEFT:22px;DISPLAY:none;BACKGROUND:url(graphics/icon.gif) no-repeat 0px 1px;HEIGHT:20px;COLOR:gray;OVERFLOW:hidden;CURSOR:default;FONT-WEIGHT:bold}
+*.highslide-dimming{POSITION:absolute;BACKGROUND:black}
+.highslide-loading{BACKGROUND-IMAGE:url(graphics/loader.white.gif);BORDER-BOTTOM:white 1px solid;BORDER-LEFT:white 1px solid;PADDING-BOTTOM:3px;TEXT-TRANSFORM:uppercase;BACKGROUND-COLOR:white;PADDING-LEFT:22px;PADDING-RIGHT:3px;DISPLAY:block;BACKGROUND-REPEAT:no-repeat;BACKGROUND-POSITION:3px 1px;COLOR:black;FONT-SIZE:9px;BORDER-TOP:white 1px solid;FONT-WEIGHT:bold;BORDER-RIGHT:white 1px solid;TEXT-DECORATION:none;PADDING-TOP:3px}
+A.highslide-credits{PADDING-BOTTOM:2px;PADDING-LEFT:2px;PADDING-RIGHT:2px;COLOR:gray;FONT-SIZE:10px;TEXT-DECORATION:none;PADDING-TOP:2px}
+A.highslide-credits I{PADDING-BOTTOM:2px;PADDING-LEFT:2px;PADDING-RIGHT:2px;COLOR:gray;FONT-SIZE:10px;TEXT-DECORATION:none;PADDING-TOP:2px}
+A.highslide-credits:hover{BACKGROUND-COLOR:gray;COLOR:white}
+A.highslide-credits:hover I{BACKGROUND-COLOR:gray;COLOR:white}
+*.highslide-controls{POSITION:relative;WIDTH:105px;HEIGHT:20px;TOP:-23px;LEFT:7px}
+*.highslide-controls UL{PADDING-BOTTOM:0px;LIST-STYLE-TYPE:none;MARGIN:0px;PADDING-LEFT:0px;PADDING-RIGHT:0px;HEIGHT:20px;PADDING-TOP:0px}
+.highslide-controls LI{FLOAT:left}
+*.highslide-controls A{BACKGROUND-IMAGE:url(graphics/controlbar-white-small.gif);OUTLINE-STYLE:none;OUTLINE-COLOR:invert;OUTLINE-WIDTH:medium;WIDTH:20px;DISPLAY:block;FLOAT:left;HEIGHT:20px}
+.highslide-controls A.disabled{CURSOR:default}
+*.highslide-controls A SPAN{DISPLAY:none}
+.highslide-controls .highslide-move{DISPLAY:none}
+.highslide-move A{CURSOR:move}
+.highslide-controls *.highslide-previous A{BACKGROUND-POSITION:0px 0px}
+*.highslide-controls *.highslide-previous A:hover{BACKGROUND-POSITION:0px -20px}
+*.highslide-controls *.highslide-previous A.disabled{BACKGROUND-POSITION:0px -40px}
+*.highslide-controls *.highslide-play A{BACKGROUND-POSITION:-20px 0px}
+*.highslide-controls .highslide-play A:hover{BACKGROUND-POSITION:-20px -20px}
+*.highslide-controls *.highslide-play A.disabled{BACKGROUND-POSITION:-20px -40px}
+.highslide-controls *.highslide-pause A{BACKGROUND-POSITION:-40px 0px}
+*.highslide-controls *.highslide-pause A:hover{BACKGROUND-POSITION:-40px -20px}
+*.highslide-controls .highslide-next A{BACKGROUND-POSITION:-60px 0px}
+.highslide-controls .highslide-next A:hover{BACKGROUND-POSITION:-60px -20px}
+.highslide-controls .highslide-next A.disabled{BACKGROUND-POSITION:-60px -40px}
+.highslide-controls .highslide-full-expand A{BACKGROUND-POSITION:-100px 0px}
+.highslide-controls .highslide-full-expand A:hover{BACKGROUND-POSITION:-100px -20px}
+.highslide-controls .highslide-full-expand A.disabled{BACKGROUND-POSITION:-100px -40px}
+.highslide-controls .highslide-close A{BACKGROUND-POSITION:-120px 0px}
+*.highslide-controls .highslide-close A:hover{BACKGROUND-POSITION:-120px -20px}

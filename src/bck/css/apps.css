@@ -1,0 +1,64 @@
+html{overflow-y:scroll;}
+.slider-wrapper{height:290px;}
+.slider{height:290px;}
+.slides_container{height:290px;width:755px;}
+.slides_control div{width:711px;text-align:center;}
+.slides_control .block_slider_text{text-align:left;}
+#right-mid H1{text-align:center;color:#FF6600;}
+.new{color:red;font-size:14px;}
+.wh3{color:#FFF;font-size:22px;position:absolute;margin:0px 0 0 10px;}
+.wh3:hover{color:#fff;}
+.wh a{font-variant:none;}
+.wh3 sup{color:#fff;}
+.tekssst{padding:20px 0 10px 0;}
+.0001{margin-top:120px;}
+.toppp{display:block;margin:0 0 20px 60px;}
+.text, .tekssst{font-family:'Times New Roman','serif';}
+.p404{display:block;height:76px;}
+.cart_lefl_col{display:block;position:absolute;margin:5px 0 0 5px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col1{display:block;position:absolute;margin:5px 0 0 5px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col2{display:block;position:absolute;margin:5px 0 0 5px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col3{display:block;position:absolute;margin:5px auto;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col4{display:block;position:absolute;margin:5px 0 0 20px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col5{display:block;position:absolute;margin:5px 0 0 15px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col6{display:block;position:absolute;margin:5px 0 0 10px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col7{display:block;position:absolute;margin:5px 0 0 25px;font-family:arial;font-size:11px;color:#fff;background:rgba(0, 0, 0, 0.0);}
+.cart_lefl_col8{display:block;position:absolute;margin:5px 0 0 25px;font-family:arial;font-size:12px;color:#000;}
+.cart_lefl_col9{display:block;position:absolute;margin:5px 0 0 25px;font-family:arial;font-size:12px;color:#000;}
+.cart_lefl_col10{display:block;position:absolute;margin:5px 0 0 15px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col11{display:block;position:absolute;margin:5px 0 0 25px;font-family:arial;font-size:12px;color:#000;}
+.cart_lefl_col12{display:block;position:absolute;margin:5px 0 0 25px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col13{display:block;position:absolute;margin:5px 0 0 1px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col14{display:block;position:absolute;margin:5px 0 0 10px;font-family:arial;font-size:11px;color:#000;}
+.cart_lefl_col15{display:block;position:absolute;margin:5px 0 0 5px;font-family:arial;font-size:11px;color:#000;}
+.tovar_zhidkiye_oboi img{width:190px;height:60px;}
+.price_zidkie_oboi{color:#000;}
+.optima_1{display:block;font-family:verdana;font-size:13px;margin:0 0 0 20px;}
+.optima_2{display:block;font-family:verdana;font-size:13px;margin:0 0 0 20px;}
+.vidos{margin:0px 0 0 0;}
+.jcarousel-skin-tango p{font-size:12px;color:#A52A2A;}
+#menu_body li ul{display:none;}
+#menu_body li:hover ul, #menu_body li.over ul{display:block;}
+#menu_body{background:#171717;width:200px;}
+#menu_body a{display:block;width:185px;height:24px;padding-left:15px;}
+#menu_body ul li{list-style-type:none;border-bottom:1px solid #fff;margin-left:-40px;padding-left:0px;}
+#menu_body ul li a{color:#fff;text-decoration:none;font-size:115%;font-family:Georgia;}
+#menu_body ul li a:hover{color:#fff;text-decoration:none;background:#424242;}
+#menu_body ul li ul li{border:0;list-style-type:none;color:#fff;list-style-position:inside;background:#7F7F7F;}
+#menu_body ul li ul{border-top:1px solid #fff;margin-left:-10px;padding-left:50px;}
+h3{line-height:1;}
+h3{padding:5px;cursor:pointer;background:url("../images/state.gif") no-repeat 100% 5px;display:block;text-decoration:none;margin:0;margin-top:10px;}
+h3 a{color:#000;text-decoration:none;}
+ul{border-bottom:2px solid #ccc;padding:10px 0 10px 20px;margin:0;}
+.active{background-position:100% -21px;}
+.col{float:left;width:210px;margin-right:30px;}
+.disclaim{margin:10px;padding:10px;background:red;}
+ul{margin:0;padding:0;list-style:none;}
+li{margin:5px 0;padding:0;}
+*html h3 a{zoom:1;}
+.b-span{font-size:14px;}
+.b-quote__content{margin-bottom:10px;}
+.b-quote{position:relative;display:inline-block;margin:0 40px;}
+.b-quote:before, .b-quote:after{color:#8A0000;font-size:40px;line-height:40px;position:absolute;}
+.b-quote:before{content:"\ab";top:-10px;left:-40px;}
+.b-quote:after{content:"\bb";bottom:-10px;right:-40px;}
